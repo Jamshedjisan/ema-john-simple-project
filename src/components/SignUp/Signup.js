@@ -11,7 +11,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const [createUserWithEmailAndPassword, user, loading] =
+  const [createUserWithEmailAndPassword, user] =
     useCreateUserWithEmailAndPassword(auth);
 
   //   if (error) {
@@ -31,7 +31,7 @@ const Signup = () => {
   };
 
   if (user) {
-    navigate("/shop");
+    navigate("/");
   }
 
   const handleCreateUser = (event) => {
